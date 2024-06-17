@@ -3957,6 +3957,8 @@ _findHook() {
     d_api="$LE_WORKING_DIR/$_hookcat/$_hookname"
   elif [ -f "$LE_WORKING_DIR/$_hookcat/$_hookname.sh" ]; then
     d_api="$LE_WORKING_DIR/$_hookcat/$_hookname.sh"
+  elif [ -f "$_hookcat/$_hookname.sh" ]; then
+    d_api="$_hookcat/$_hookname.sh"
   fi
 
   printf "%s" "$d_api"
